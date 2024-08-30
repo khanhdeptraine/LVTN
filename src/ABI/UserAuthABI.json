@@ -1,0 +1,161 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "patient",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "patientFullName",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "birthDate",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "illness",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "notes",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "prescription",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "date",
+                "type": "uint256"
+            }
+        ],
+        "name": "RecordAdded",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_patientFullName",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_birthDate",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_illness",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_notes",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_prescription",
+                "type": "string"
+            }
+        ],
+        "name": "addRecord",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getRecords",
+        "outputs": [
+            {
+                "internalType": "string[]",
+                "name": "patientFullNames",
+                "type": "string[]"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "birthDates",
+                "type": "uint256[]"
+            },
+            {
+                "internalType": "string[]",
+                "name": "illnesses",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string[]",
+                "name": "notes",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string[]",
+                "name": "prescriptions",
+                "type": "string[]"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "dates",
+                "type": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_patientFullName",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_birthDate",
+                "type": "uint256"
+            }
+        ],
+        "name": "lookupRecord",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "illness",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "notes",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "prescription",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "date",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
